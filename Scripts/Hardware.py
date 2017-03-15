@@ -5,10 +5,10 @@ import sys
 import termios
 import tty
 
-bus = smbus.SMBus(1)
-gyroAddress = 0x68
+#bus = smbus.SMBus(1)
+#gyroAddress = 0x68
 
-Motor1E = 15
+Motor1E = 33
 Motor1A = 35
 Motor1B = 37
 
@@ -21,8 +21,21 @@ greenLED = 36
 green1LED = 32
 yellowLED = 38
 redLED = 40
-panServo = 12
+panServo = 7
 tiltServo = 11
+
+ECHO = 13
+TRIG = 22
+
+pir = 15
+
+PhotoPin = 24
+PhotoPin2 = 10
+
+RIRLED = 19
+LIRLED =31
+LIREC = 8
+RIREC = 26
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(Motor2E, GPIO.OUT)
@@ -41,6 +54,21 @@ GPIO.setup(yellowLED, GPIO.OUT)
 GPIO.setup(redLED, GPIO.OUT)
 GPIO.setup(panServo, GPIO.OUT)
 GPIO.setup(tiltServo, GPIO.OUT)
+
+GPIO.setup(TRIG,GPIO.OUT)
+GPIO.setup(ECHO,GPIO.IN)
+GPIO.output(TRIG, False)
+
+GPIO.setup(pir, GPIO.IN)
+
+GPIO.setup(PhotoPin, GPIO.OUT)
+GPIO.setup(PhotoPin2, GPIO.OUT)
+
+GPIO.setup(RIRLED,GPIO.OUT)
+GPIO.setup(LIRLED,GPIO.OUT)
+GPIO.setup(LIREC, GPIO.IN)
+GPIO.setup(RIREC, GPIO.IN)
+
 
 def getKey():
     fd = sys.stdin.fileno()
@@ -82,9 +110,9 @@ def pan(direction):
         os.system("echo 2=-1 > /dev/servoblaster")
     return
 
-os.system("sudo /home/pi/csrbot1/PiBits/ServoBlaster/user/servod")
-os.system("echo 1=150 > /dev/servoblaster")
-os.system("echo 2=150 > /dev/servoblaster")
+#os.system("sudo /home/pi/csrbot1/PiBits/ServoBlaster/user/servod")
+#os.system("echo 1=150 > /dev/servoblaster")
+#os.system("echo 2=150 > /dev/servoblaster")
 
 
 
