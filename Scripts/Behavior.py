@@ -120,7 +120,7 @@ class Behave(object):
         sleep(.03)
 
     def newMessage(self):
-        print("low battery")
+        print("new message")
         GPIO.output(self.yellow, GPIO.HIGH)
         self.buzz(1200)
         self.buzz(900)
