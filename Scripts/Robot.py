@@ -19,7 +19,7 @@ class Robot(object): #147
         self.vision = Vision()
         self.stopRetrieving   = False
         self.communicate = Communicate()
-        self.retrieveMessagesThread = Thread(target=robot.retrieveMessages)
+        self.retrieveMessagesThread = Thread(target=self.retrieveMessages)
         #self.retrieveMessagesThread.start()
         
     def retrieveMessages(self):
@@ -196,7 +196,7 @@ try:
 
         if cmd == "i":
             robot.communicate = Communicate()
-            robot.retrieveMessagesThread = Thread(target=self.retrieveMessages)
+            robot.retrieveMessagesThread = Thread(target=robot.retrieveMessages)
             robot.retrieveMessagesThread.start()
             robot.stopRetrieving = False
             addr = input("enter the address to connect to or 0.0.0.0 if you are the server: ")
