@@ -42,6 +42,8 @@ class Move:
         GPIO.output(Motor2B, GPIO.LOW)
         if self.dir is -1:
             self.stop()
+        self.p1.start(10)
+        self.p1.start(10)
         for x in range(self.vel, (maxa+5), step):
             self.p1.ChangeDutyCycle(x)
             self.p2.ChangeDutyCycle(x)
@@ -65,6 +67,8 @@ class Move:
         GPIO.output(Motor2B,GPIO.HIGH)
         if self.dir is 1:
             self.stop()
+        self.p1.start(10)
+        self.p1.start(10)
         for x in range(self.vel, (maxa+5), step):
             self.p1.ChangeDutyCycle(x)
             self.p2.ChangeDutyCycle(x)
@@ -88,13 +92,18 @@ class Move:
         GPIO.output(Motor2A,GPIO.HIGH)
         GPIO.output(Motor2B, GPIO.LOW)
         if self.vel is 0:
+            self.p1.start(10)
+            self.p2.start(10)
             for x in range(0, 4):
                 self.p1.ChangeDutyCycle(lStep)
                 self.p2.ChangeDutyCycle(rStep)
                 print(x)
                 lStep += la
                 rStep += ra
-                sleep(.25)  
+                sleep(.25)
+        else:
+            self.p1.start(leftWheelSpeed)
+            self.p2.start(rightWheelSpeed)
         #self.p1.start(leftWheelSpeed)
         #self.p2.start(rightWheelSpeed)
         self.vel = int(max(lStep, rStep))
