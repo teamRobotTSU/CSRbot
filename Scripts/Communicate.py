@@ -37,7 +37,10 @@ class Communicate(object):
             received = self.connection.recv(1024)
             decoded = received.decode('utf-8')
             if len(decoded) > 0:
-                self.inbox.appendleft(decoded)
+                if decoded == "connection closed.":
+                    print("connection closed.")
+                else:
+                    self.inbox.appendleft(decoded)
         return
 
     def closeConnection(self):
