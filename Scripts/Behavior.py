@@ -14,6 +14,7 @@ class Behave(object):
         self.green1 = green1LED
         self.yellow = yellowLED
         self.red = redLED
+        print("behave object created.")
 
     ######     TEST     ######
     #this moves the servo, buzzes, and illumantes all the leds
