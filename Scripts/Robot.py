@@ -214,7 +214,7 @@ try:
             commOpen = False
             robot.stopRetrieving = True
             robot.retrieveMessagesThread.join()
-            del self.communicate
+            del robot.communicate
             continue
         if cmd == "y" and commOpen:
             msg = input("enter the message to send: ")
