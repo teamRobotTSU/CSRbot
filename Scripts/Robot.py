@@ -32,7 +32,8 @@ class Robot(object): #147
     def quit(self):
         hardwareCleanup()
         self.stopRetrieving = True
-        self.retrieveMessagesThread.join()
+        if self.retrieveMessagesThread.isAlive():
+            self.retrieveMessagesThread.join()
         return
 
 
