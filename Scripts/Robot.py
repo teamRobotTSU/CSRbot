@@ -195,10 +195,10 @@ try:
             continue
 
         if cmd == "i":
-            self.communicate = Communicate()
-            self.retrieveMessagesThread = Thread(target=self.retrieveMessages)
-            self.retrieveMessagesThread.start()
-            self.stopRetrieving = False
+            robot.communicate = Communicate()
+            robot.retrieveMessagesThread = Thread(target=self.retrieveMessages)
+            robot.retrieveMessagesThread.start()
+            robot.stopRetrieving = False
             addr = input("enter the address to connect to or 0.0.0.0 if you are the server: ")
             if addr == "0.0.0.0":
                 robot.communicate.setupLine("")
@@ -212,8 +212,8 @@ try:
             robot.communicate.closeConnection()
             print("connection closed.")
             commOpen = False
-            self.stopRetrieving = True
-            self.retrieveMessagesThread.join()
+            robot.stopRetrieving = True
+            robot.retrieveMessagesThread.join()
             del self.communicate
             continue
         if cmd == "y" and commOpen:
