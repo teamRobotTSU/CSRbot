@@ -19,7 +19,7 @@ class Robot(object): #147
         self.vision = Vision()
         self.stopRetrieving   = False
         self.communicate = Communicate()
-        self.retrieveMessagesThread = Thread(target=self.retrieveMessages)
+        self.retrieveMessagesThread = Thread(target=robot.retrieveMessages)
         #self.retrieveMessagesThread.start()
         
     def retrieveMessages(self):
