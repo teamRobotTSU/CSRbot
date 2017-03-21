@@ -20,13 +20,13 @@ class Robot(object): #147
         self.stopRetrieving   = False
         self.communicate = Communicate()
         self.retrieveMessagesThread = Thread(target=self.retrieveMessages)
-        self.retrieveMessagesThread.start()
+        #self.retrieveMessagesThread.start()
         
     def retrieveMessages(self):
         while not self.stopRetrieving:
-            while len(self.communicate.inbox) > 0:
+            if len(self.communicate.inbox) > 0:
                 self.behave.newMessage()
-                sleep(5)
+            sleep(5)
 
 
     def quit(self):
@@ -195,6 +195,10 @@ try:
             continue
 
         if cmd == "i":
+            self.communicate = Communicate()
+            self.retrieveMessagesThread = Thread(target=self.retrieveMessages)
+            self.retrieveMessagesThread.start()
+            self.stopRetrieving = False
             addr = input("enter the address to connect to or 0.0.0.0 if you are the server: ")
             if addr == "0.0.0.0":
                 robot.communicate.setupLine("")
@@ -208,6 +212,9 @@ try:
             robot.communicate.closeConnection()
             print("connection closed.")
             commOpen = False
+            self.stopRetrieving = True
+            self.retrieveMessagesThread.join()
+            del self.communicate
             continue
         if cmd == "y" and commOpen:
             msg = input("enter the message to send: ")
