@@ -4,7 +4,7 @@ from Hardware import *
 
 
 
-class Sensors:
+class Sense:
   def __init__(self):
     print("Object Created")
     self.ECHO = ECHO
