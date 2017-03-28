@@ -13,7 +13,7 @@ Complete the setup instructions here.  This will also go into chapter 5.  After 
       you should now see a folder "csrbot" in your directory. 
 6.  type: cd csrbot (change directory).  See what pwd and ls commands show now.
 7.  type: cd pi (then press tab before pressing enter) remember tab completion!!!
-8.  We need to run the piSetup.sh
+8.  We need to run the piSetup.sh,
       any file that ends with .sh means it is a "shell" file, and can be executed from
       the shell.  This is equivelant to double clicking on a program in Windows.
 9.  First, make it executable by typing: sudo chmod +x piSetup.sh
