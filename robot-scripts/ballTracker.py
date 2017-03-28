@@ -1,5 +1,5 @@
-from VideoStream import VideoStream
-from Robot import Move, Behave
+from robot-api/VideoStream import VideoStream
+from robot-api/Robot import Move, Behave
 import datetime
 import numpy as np
 import RPi.GPIO as GPIO
