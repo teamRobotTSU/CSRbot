@@ -10,10 +10,12 @@ sudo apt-get install libgtk2.0-dev -y
 sudo apt-get install libatlas-base-dev gfortran -y
 sudo apt-get install python2.7-dev python 3-dev python3.4-dev -y
 wget https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
-sudo python3 get-pip.py
-sudo pip install numpy
-sudo pip3 install numpy
+
+#it is assumed you have these already after setting up the pi
+#sudo python get-pip.py
+#sudo python3 get-pip.py
+#sudo pip install numpy
+#sudo pip3 install numpy
 wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip
 wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip
 unzip opencv.zip
@@ -29,5 +31,5 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 make
 sudo make install
 sudo ldconfig
-python3 cvVersion.py
+python3 /home/$USER/csrbot/robot-scripts/cvVersion.py
 echo "the installer script has completed."
