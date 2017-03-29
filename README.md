@@ -21,7 +21,7 @@ Complete the setup instructions here.  This will also go into chapter 5.  After 
       something as an administrator, or Super User in linux terms. to find out what 
       chmod does (or anything else for the matter) type: man chmod (man = manual)
 10. Now to execute this file, or any other executable file from the shell, type:
-      ./piSetup.sh and wait for the script to finish.  This script installs the following:
+      ./piSetup.sh and wait for the script to finish. (do not execute as sudo) This script installs the following:
           - package 1 
           - package 2
           - package 3

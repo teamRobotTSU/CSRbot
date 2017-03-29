@@ -6,6 +6,12 @@ echo "****************   UPDATING   ********************"
 echo "**************************************************"
 sudo apt-get update -y
 
+echo "**************************************************"
+echo "****************  INSTALLING PACKAGES   **********"
+echo "**************************************************"
+sudo apt-get install libatlas-base-dev gfortran -y --force-yes
+sudo apt-get install python2.7-dev python3-dev python3.4-dev -y --force-yes
+
 echo "********************************************************"
 echo "****************   INSTALLING PIP   ********************"
 echo "********************************************************"
@@ -19,7 +25,7 @@ echo "********************************************************************"
 sudo pip install numpy
 sudo pip3 install numpy
 sudo pip3 install imutils
-sudo pip3 install scipy
+#sudo pip3 install scipy
 
 echo "********************************************************************"
 echo "****************   INSTALLING PYTHON2 PACKAGES  ********************"
@@ -30,7 +36,6 @@ echo "*************************************************************"
 echo "****************   INSTALLING VNC SERVER ********************"
 echo "*************************************************************"
 sudo apt-get install tightvncserver -y
-printf "vncserver :1" >> .bashrc
 
 echo "********************************************************************"
 echo "****************   CHANGING DESKTOP BACKGROUND  ********************"
