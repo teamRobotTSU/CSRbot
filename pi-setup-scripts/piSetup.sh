@@ -25,6 +25,7 @@ echo "********************************************************************"
 sudo pip install numpy
 sudo pip3 install numpy
 sudo pip3 install imutils
+sudo apt-get install python-tk
 #sudo pip3 install scipy
 
 echo "********************************************************************"
