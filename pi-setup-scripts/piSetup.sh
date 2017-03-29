@@ -7,13 +7,8 @@ echo "**************************************************"
 sudo apt-get update -y
 
 echo "**************************************************"
-echo "****************  INSTALLING PACKAGES   ********************"
+echo "****************  INSTALLING PACKAGES   **********"
 echo "**************************************************"
-sudo apt-get install build-essential cmake pkg-config -y --force-yes
-sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev -y --force-yes
-sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev -y --force-yes
-sudo apt-get install libxvidcore-dev libx264-dev -y --force-yes
-sudo apt-get install libgtk2.0-dev -y --force-yes
 sudo apt-get install libatlas-base-dev gfortran -y --force-yes
 sudo apt-get install python2.7-dev python3-dev python3.4-dev -y --force-yes
 
@@ -31,7 +26,6 @@ sudo pip install numpy
 sudo pip3 install numpy
 sudo pip3 install imutils
 #sudo pip3 install scipy
-
 
 echo "********************************************************************"
 echo "****************   INSTALLING PYTHON2 PACKAGES  ********************"
