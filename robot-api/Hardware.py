@@ -32,10 +32,6 @@ pir = 15
 PhotoPin = 24
 PhotoPin2 = 10
 
-RIRLED = 19
-LIRLED =31
-LIREC = 8
-RIREC = 26
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(Motor2E, GPIO.OUT)

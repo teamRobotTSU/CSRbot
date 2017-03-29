@@ -19,13 +19,6 @@ class Sense:
 
     self.PhotoPin2 = PhotoPin2
 
-    self.RIRLED = RIRLED
-    self.LIRLED = LIRLED
-
-
-
-    self.LIREC = LIREC
-    self.RIREC = RIREC
     
   def SonicRange(self):
     print ("Distance Measurement In Progress")
@@ -78,31 +71,8 @@ class Sense:
     time.sleep(0.1)
     GPIO.setup(self.PhotoPin2,GPIO.IN)
     while (GPIO.input(self.PhotoPin2) == GPIO.LOW):
-      ##print ("Enter Loop")
       count+=1
     return count
-
-  def IRTrans(self):
-    GPIO.output(self.LIRLED, 1)
-    GPIO.output(self.RIRLED,1)
-    self.IRRec()
-    GPIO.output(self.LIRLED,0)
-    GPIO.output(self.RIRLED,0)
-    
-  def IRRec(self):
-    stat = True
-    newcount = 0
-    while stat:
-
-      newcount+=1
-      LeftInput = GPIO.input(self.LIREC)
-      RightInput = GPIO.input(self.RIREC)
-      if LeftInput == 1 and RightInput == 1:
-        print ("Surface there")
-      elif LeftInput == 0 or RightInput == 0:
-        print ("No Surface | RightInput =", RightInput, "Left Input =", LeftInput, "count", newcount)
-        ##self.LED()
-        stat = False
 
 def destroy():
   GPIO.cleanup()
@@ -112,11 +82,10 @@ def main():
   try:
     print("Distance from object", a.SonicRange(), "cm")
     a.LED()
-    ##a.PIR()
+    a.PIR()
     print("Time to charge short Capacitor", a.PhotoRes(), "loops")
     print("Time to charge tall Capacitor", a.PhotoRes2(), "loops")
-    ##a.IRTrans()
-    ##a.IRRec()
+    
   except KeyboardInterrupt:
     destroy()
   finally:
