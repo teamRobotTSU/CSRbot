@@ -60,11 +60,6 @@ GPIO.setup(pir, GPIO.IN)
 GPIO.setup(PhotoPin, GPIO.OUT)
 GPIO.setup(PhotoPin2, GPIO.OUT)
 
-GPIO.setup(RIRLED,GPIO.OUT)
-GPIO.setup(LIRLED,GPIO.OUT)
-GPIO.setup(LIREC, GPIO.IN)
-GPIO.setup(RIREC, GPIO.IN)
-
 
 def getKey():
     fd = sys.stdin.fileno()
