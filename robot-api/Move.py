@@ -43,7 +43,7 @@ class Move:
         if self.dir is -1:
             self.stop()
         self.p1.start(10)
-        self.p1.start(10)
+        self.p2.start(10)
         for x in range(self.vel, (maxa+5), step):
             self.p1.ChangeDutyCycle(x)
             self.p2.ChangeDutyCycle(x)
@@ -68,7 +68,7 @@ class Move:
         if self.dir is 1:
             self.stop()
         self.p1.start(10)
-        self.p1.start(10)
+        self.p2.start(10)
         for x in range(self.vel, (maxa+5), step):
             self.p1.ChangeDutyCycle(x)
             self.p2.ChangeDutyCycle(x)
