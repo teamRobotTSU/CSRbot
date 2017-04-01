@@ -18,9 +18,9 @@ Motor2B = 16
 
 buzzer = 13
 greenLED = 8
-green1LED = 33
+green1LED = 40
 yellowLED = 10
-redLED = 40
+redLED = 33
 panServo = 7
 tiltServo = 11
 
