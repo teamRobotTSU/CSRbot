@@ -9,12 +9,12 @@ import tty
 #gyroAddress = 0x68
 
 Motor1E = 32
-Motor1A = 36
-Motor1B = 38
+Motor1A = 38
+Motor1B = 36
 
 Motor2E = 18
-Motor2A = 16
-Motor2B = 12
+Motor2A = 12
+Motor2B = 16
 
 buzzer = 13
 greenLED = 35
