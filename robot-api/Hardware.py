@@ -30,7 +30,7 @@ TRIG = 22
 pir = 35
 
 PhotoPin = 24
-PhotoPin2 = 10
+PhotoPin2 = 28
 
 
 GPIO.setmode(GPIO.BOARD)
