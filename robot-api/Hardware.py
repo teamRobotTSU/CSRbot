@@ -24,7 +24,7 @@ redLED = 33
 panServo = 7
 tiltServo = 11
 
-ECHO = 29
+ECHO = 23
 TRIG = 22
 
 pir = 35
