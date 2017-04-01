@@ -43,5 +43,5 @@ make
 sudo make install
 sudo ldconfig
 echo "your cv version is (should be 3.1.0):"
-python3 /home/$USER/csrbot/robot-scripts/cvVersion.py
+python3 -c 'import cv2; print("Installed OpenCV Version: "); print(cv2.__version__)'
 echo "the installer script has completed."
