@@ -8,18 +8,18 @@ import tty
 #bus = smbus.SMBus(1)
 #gyroAddress = 0x68
 
-Motor1E = 33
-Motor1A = 35
-Motor1B = 37
+Motor1E = 32
+Motor1A = 36
+Motor1B = 38
 
 Motor2E = 18
 Motor2A = 16
 Motor2B = 12
 
 buzzer = 13
-greenLED = 36
-green1LED = 32
-yellowLED = 38
+greenLED = 35
+green1LED = 33
+yellowLED = 37
 redLED = 40
 panServo = 7
 tiltServo = 11
