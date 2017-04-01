@@ -17,7 +17,7 @@ Motor2A = 12
 Motor2B = 16
 
 buzzer = 13
-greenLED = 35
+greenLED = 15
 green1LED = 33
 yellowLED = 37
 redLED = 40
@@ -27,7 +27,7 @@ tiltServo = 11
 ECHO = 29
 TRIG = 22
 
-pir = 15
+pir = 35
 
 PhotoPin = 24
 PhotoPin2 = 10
