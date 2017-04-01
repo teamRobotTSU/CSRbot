@@ -16,7 +16,7 @@ Motor2E = 18
 Motor2A = 16
 Motor2B = 12
 
-buzzer = 29
+buzzer = 13
 greenLED = 36
 green1LED = 32
 yellowLED = 38
@@ -24,7 +24,7 @@ redLED = 40
 panServo = 7
 tiltServo = 11
 
-ECHO = 13
+ECHO = 29
 TRIG = 22
 
 pir = 15
