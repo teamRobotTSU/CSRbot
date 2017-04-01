@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 cd ~
@@ -44,3 +45,4 @@ echo "********************************************************************"
 pcmanfm --set-wallpaper ~/csrbot/pi-setup-scripts/robotBackground.png
 
 echo "the installer script has completed."
+passwd
