@@ -1,8 +1,8 @@
 CSRbot setup instructions
 *************************
-Complete the setup instructions here.  This will also go into chapter 5.  After following these instructions the user should have all necessary packages and dependencies on their robot and be able to run the robot.py script.
 
-1.  run raspi-config to enable the raspicam, ssh, login options, and change localization settings
+
+1.  Complete the assembly and setup guide.
 2.  reboot
 3.  login in and enable wi-fi
 4.  open a terminal and type: pwd (print working directory)
