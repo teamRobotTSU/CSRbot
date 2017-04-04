@@ -1,0 +1,35 @@
+PARTS LIST
+
+*Note the included links are what we used.  As this is an open source kit, pretty much anything will work if yo uknow what you are doing
+
+
+1.  1x Robot frame
+2.  2x DC motors and wheels (https://www.amazon.com/DIYmall-Uniaxial-Geared-Magnetic-Gearbox/dp/B012FYMW54/ref=sr_1_3?ie=UTF8&qid=1491264356&sr=8-3&keywords=dc+robot+motors)
+3.  1x pan and tilt unit with micro servos (https://www.amazon.com/Adafruit-Mini-Pan-Tilt-Kit-Assembled/dp/B00XW2NR12/ref=sr_1_1?ie=UTF8&qid=1491264439&sr=8-1&keywords=micro+servo+pan+tilt)
+4.  1x Battery pack (capable of supplying power to the pi and motors)
+5.  1x front ball bearing (https://www.amazon.com/uxcell-Flange-Mounting-Transfer-Bearing/dp/B01BHRDIU8/ref=sr_1_11?ie=UTF8&qid=1491264552&sr=8-11&keywords=roller+ball+transfer+bearing)
+6.  1x breadboard (https://www.amazon.com/Solderless-Breadboard-Circuit-Circboard-Prototyping/dp/B01DDI54II/ref=sr_1_2?ie=UTF8&qid=1491264636&sr=8-2-spons&keywords=breadboard&psc=1)
+7.  1x Raspberry pi 3 (https://www.amazon.com/Raspberry-Pi-RASPBERRYPI3-MODB-1GB-Model-Motherboard/dp/B01CD5VC92/ref=sr_1_4?s=pc&ie=UTF8&qid=1491264704&sr=1-4&keywords=raspberry+pi+3)
+8.  assorted jumper wires
+9.  1x pi camera (https://www.amazon.com/Arducam-Megapixels-Sensor-OV5647-Raspberry/dp/B012V1HEP4/ref=sr_1_2?s=electronics&ie=UTF8&qid=1491264765&sr=1-2&keywords=pi+camera)
+10. 1x 12" ribbon cable (https://www.amazon.com/Adafruit-Flex-Cable-Raspberry-Camera/dp/B01BMRENE8/ref=sr_1_12?s=electronics&ie=UTF8&qid=1491264859&sr=1-12&keywords=pi+camera+cable)
+11. 2x .1uf capacitors
+12. 4x 220ohm or 330ohm or 470 ohm resistors for the leds
+13. 1x 1K ohm resistor and 1x 2.2Kohm resistor for the 3.3v voltage divider required for the sonic range sensor
+14. 1x 1K ohm and 1x 220ohm resistor (for the 6.1v voltage divider required for the motors if your battery pack is a 7.4v lipo)
+15. 1x 7805 voltage regulator
+16. 2x green LEDs, 1x yellow LED, 1x red LED
+17. 1x passive buzzer 
+18. 1x L293 or equivelant motor driver
+19. 2x photoresistors
+20. 1x 3 position switch
+
+optional sensors / components include but not limited to:
+-mpu 6050 (gyroscope and accelerometer)
+-hmc 5883 (compass)
+-gps module
+-bmp 180 (barometric pressure sensor)
+-arduino (if adding an arduino analog sensors like IR receivers and more can be used)
+-sound detection sensor
+-motor encoders 
+-more
