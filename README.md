@@ -1,7 +1,7 @@
 CSRbot setup instructions
 *************************
 
-
+0.  Gather the required parts.
 1.  Complete the assembly and setup guide.
 2.  reboot
 3.  login in and enable wi-fi
