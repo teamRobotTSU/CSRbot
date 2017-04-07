@@ -17,13 +17,11 @@ echo "********************************************************"
 echo "****************   INSTALLING PIP   ********************"
 echo "********************************************************"
 wget https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
 sudo python3 get-pip.py
 
 echo "********************************************************************"
 echo "****************   INSTALING PYTHON3 PACKAGES   ********************"
 echo "********************************************************************"
-sudo pip install numpy
 sudo pip3 install numpy
 sudo pip3 install imutils
 sudo apt-get install python-tk
