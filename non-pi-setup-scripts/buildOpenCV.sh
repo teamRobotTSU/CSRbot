@@ -5,6 +5,7 @@ echo '                    Installing Packages                        '
 echo '***************************************************************'
 sudo apt-get install build-essential cmake -y
 sudo apt-get install qt5-default libvtk6-dev -y
+sudo apt-get install hdf5-helpers hdf5-tools -y
 echo '*****************************************************'
 sudo apt-get install libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev zlib1g-dev libwebp-dev libopenexr-dev libgdal-dev -y
 echo '*****************************************************'
