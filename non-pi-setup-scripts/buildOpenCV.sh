@@ -22,6 +22,9 @@ echo '            Installing Numpy and Matplotlib                    '
 echo '***************************************************************'
 sudo apt-get install python3-numpy -y
 sudo apt-get install python3-matplotlib -y
+sudo apt-get install python3-scipy -y
+sudo apt-get install python3-skimage -y
+
 cd ~
 echo '***************************************************************'
 echo '                     Downloading OpenCV                        '
