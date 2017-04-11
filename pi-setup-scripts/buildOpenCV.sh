@@ -16,6 +16,15 @@ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev -y
 sudo apt-get install libxvidcore-dev libx264-dev -y --force-yes
 sudo apt-get install libgtk2.0-dev -y --force-yes
 
+
+echo "**************************************************"
+echo "**********  INSTALLING PYTHON PACKAGE   **********"
+echo "**************************************************"
+sudo apt-get install python3-numpy -y
+sudo apt-get install python3-matplotlib -y
+sudo apt-get install python3-scipy -y
+sudo apt-get install python3-skimage -y
+
 echo "**************************************************"
 echo "****************  GETTING OPENCV   ***************"
 echo "**************************************************"
