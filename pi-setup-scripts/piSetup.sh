@@ -40,7 +40,7 @@ sudo apt-get install tightvncserver -y
 echo "********************************************************************"
 echo "****************   CHANGING DESKTOP BACKGROUND  ********************"
 echo "********************************************************************"
-pcmanfm --set-wallpaper ~/csrbot/pi-setup-scripts/robotBackground.png
+pcmanfm --set-wallpaper ~/csrbot/pi-setup-scripts/robotBackground.jpg
 
 echo "the installer script has completed."
 passwd
