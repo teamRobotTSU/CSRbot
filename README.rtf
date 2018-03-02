@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\b\fs24 \cf0 CSRbot Learning Platform website
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\b \cf0 \ul \ulc0 Current structure of the site:
+\b0 \ulnone \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+homepage\
+	\'97All courses page (has links to each course_detail page)\
+		\'97
+\b course_detail
+\b0  page (has links to each step_detail page in this course)\
+			\'97
+\b step_detail
+\b0  page (contains the 
+\b Ace code editor
+\b0 )\
+\
+
+\i Note
+\i0 : on the site, \'91course\'92 = \'91Coding Task\'92. For example, you will see \'91Coding Task 1\'92 for this course_detail page\'85etc. This is the only anomaly.\
+\
+Currently in models and the SQLite DB: course and step are connected with a foreign key for a one-to-many relationship respectively. \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\b \cf0 \ul Current Requirements (which I need to complete within the next 3 days):
+\b0 \ulnone \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+1) 
+\b Embed and configure Ace editor in the step_detail template
+\b0  (I have tried django-ace and code-mirror so far with no luck). But I want to use Ace or Django-Ace since Ace is the market leader and seems to be the best option out there. I want to configure the mode (python) and theme(probably ambiance), and get the text highlighting to work properly.\
+\
+2) 
+\b Create quiz functionality for step_detail page with Ace editor.
+\b0  \
+\
+The current structure of the step_detail page:\
+	\
+	step title\
+	step question\
+	Ace editor\
+\
+The functionality for the step_detail page is question and answer:\
+\
+	\'97the student inputs an answer to the question into the editor.\
+		\'97if the answer is wrong, then a pop-up occurs indicating \'91bummer, try again\'92 etc., with \
+			navigation option to cancel the pop-up and refresh/restart the current page.\
+		\'97if the answer is correct, then a pop-up occurs saying \'91great!\'92 with a navigation option \
+			to continue to the next step. \
+ \
+
+\i Note-1
+\i0 : Every subsequent step in a respective course/Coding Task will have the code in the editor from the previous step. A few first steps will also most likely already have some code in the editor to get the student started. \
+\
+
+\i Note-2:
+\i0  When matching the student\'92s response with the answer in the db; Ideally, I want to hash the student\'92s response, the db only contains the set of possible hashed responses. \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\b \cf0 \ul Future requirements (to be done during the next 2-3 weeks):
+\b0 \ulnone \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+1) improve the layout.html and home.html. I would like to include bootstrap and have a background banner picture.\
+\
+2) add a login form to homepage.\
+\
+3) Add an an \'91about\'92  page.\
+\
+4) Add a contact/suggestion form.\
+\
+5) Add a Forum package( I have no idea how to begin this).\
+\
+For more long-range:\
+\
+6) I want to have a page with a GPIO GUI for our robot, and use websockets/Django channels to engage in real-time connectivity with the robot.  The robot uses Raspberry Pi 3. I need to flesh out the requirements. However, for now, something simple would be stupendous. For example, press a button and the robot move forward. Our robot API is already implemented.\
+\
+7) create a tests.py module that satisfactorily tests the entire site.\
+\
+8) set the site up on Heroku or Python Anywhere. (To my knowledge, channels app will not work on Pythonanywhere). \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
